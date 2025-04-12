@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_reposnsive/constants.dart';
 
-class DesktopBody extends StatelessWidget {
-  const DesktopBody({super.key});
+class IPad extends StatelessWidget {
+  const IPad({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text("D E S K T O P", style: TextStyle(color: Colors.white)),
+        title: Text("P A D", style: TextStyle(color: Colors.white)),
       ),
       body: Row(
         children: [
@@ -23,7 +24,7 @@ class DesktopBody extends StatelessWidget {
                       aspectRatio: 16 / 9,
                       child: Container(
                         decoration: BoxDecoration(
-                          color: Color(0xff85c2f6),
+                          color: Color(accentColor),
                           borderRadius: BorderRadius.circular(6),
                         ),
                         width: double.infinity,
@@ -43,7 +44,7 @@ class DesktopBody extends StatelessWidget {
                         height: 120,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6),
-                          color: Color(0xff85c2f6),
+                          color: Color(accentColor),
                         ),
                       ),
                     );
@@ -55,7 +56,7 @@ class DesktopBody extends StatelessWidget {
 
           // Right side
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+            padding: EdgeInsets.only(top: 8, bottom: 8, right: 13 ),
             child: Container(
               width: 200,
               height: double.infinity,

@@ -1,6 +1,7 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_reposnsive/constants.dart';
 import 'package:flutter_reposnsive/screens/home.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -10,7 +11,7 @@ void main() {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
   );
-  runApp(const MyApp());
+  runApp(DevicePreview(builder: (context) => const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -20,8 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        scaffoldBackgroundColor: Color(0xff58abf3),
-        appBarTheme: AppBarTheme(color: Color(0xff1d8af1)),
+        scaffoldBackgroundColor: Color(backgroundColor),
+        appBarTheme: AppBarTheme(color: Color(primaryColor), elevation: 0),
 
         fontFamily: GoogleFonts.dmSerifDisplay(color: Colors.white).fontFamily,
       ),

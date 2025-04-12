@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_reposnsive/responsive/desktop_body.dart';
+import 'package:flutter_reposnsive/responsive/ipad_body.dart';
 import 'package:flutter_reposnsive/responsive/mobile_body.dart';
 import 'package:flutter_reposnsive/responsive/responsive_layout.dart';
 
@@ -15,8 +15,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     // final height = MediaQuery.of(context).size.height;
     // final width = MediaQuery.of(context).size.width;
-     return Scaffold(
-    body: ResponsiveLayout(mobileBody: MobileBody(), desktopBody: DesktopBody()), 
+    return Scaffold(
+      body: ResponsiveLayout(mobileBody: MobileBody(), desktopBody: IPad()),
     );
   }
 }
